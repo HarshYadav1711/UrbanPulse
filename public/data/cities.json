@@ -1,0 +1,1234 @@
+{
+  "generatedAt": "2026-06-06",
+  "methodology": {
+    "airQuality": "Open-Meteo Air Quality API — hourly PM2.5 aggregated to monthly means",
+    "whoThresholds": "Excellent ≤5, Moderate ≤15, Elevated ≤35, High >35 µg/m³ (WHO 2021)",
+    "livabilityBaseline": "Static composite from public urban quality indicators (see README)"
+  },
+  "cities": [
+    {
+      "id": "nyc",
+      "name": "New York",
+      "country": "United States",
+      "region": "North America",
+      "lat": 40.7128,
+      "lon": -74.006,
+      "livabilityScore": 82,
+      "livabilityRank": 12,
+      "airQuality": {
+        "pm25AnnualMean": 14.31,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -24.2,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 11.94
+          },
+          {
+            "month": "2026-01",
+            "pm25": 12.93
+          },
+          {
+            "month": "2026-02",
+            "pm25": 23.07
+          },
+          {
+            "month": "2026-03",
+            "pm25": 14.19
+          },
+          {
+            "month": "2026-04",
+            "pm25": 11.4
+          },
+          {
+            "month": "2026-05",
+            "pm25": 12.6
+          },
+          {
+            "month": "2026-06",
+            "pm25": 14.04
+          }
+        ],
+        "effectiveRank": 12,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "la",
+      "name": "Los Angeles",
+      "country": "United States",
+      "region": "North America",
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "livabilityScore": 76,
+      "livabilityRank": 28,
+      "airQuality": {
+        "pm25AnnualMean": 22.28,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -22.4,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 27.61
+          },
+          {
+            "month": "2026-01",
+            "pm25": 23.17
+          },
+          {
+            "month": "2026-02",
+            "pm25": 22.86
+          },
+          {
+            "month": "2026-03",
+            "pm25": 26.1
+          },
+          {
+            "month": "2026-04",
+            "pm25": 17.08
+          },
+          {
+            "month": "2026-05",
+            "pm25": 18.29
+          },
+          {
+            "month": "2026-06",
+            "pm25": 20.63
+          }
+        ],
+        "effectiveRank": 32,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "country": "United States",
+      "region": "North America",
+      "lat": 41.8781,
+      "lon": -87.6298,
+      "livabilityScore": 78,
+      "livabilityRank": 22,
+      "airQuality": {
+        "pm25AnnualMean": 10.49,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -20.3,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 10.32
+          },
+          {
+            "month": "2026-01",
+            "pm25": 9.05
+          },
+          {
+            "month": "2026-02",
+            "pm25": 14.54
+          },
+          {
+            "month": "2026-03",
+            "pm25": 10.89
+          },
+          {
+            "month": "2026-04",
+            "pm25": 10.15
+          },
+          {
+            "month": "2026-05",
+            "pm25": 8.66
+          },
+          {
+            "month": "2026-06",
+            "pm25": 8.68
+          }
+        ],
+        "effectiveRank": 22,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "toronto",
+      "name": "Toronto",
+      "country": "Canada",
+      "region": "North America",
+      "lat": 43.6532,
+      "lon": -79.3832,
+      "livabilityScore": 84,
+      "livabilityRank": 9,
+      "airQuality": {
+        "pm25AnnualMean": 10.64,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": 5.0,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 5.26
+          },
+          {
+            "month": "2026-01",
+            "pm25": 7.15
+          },
+          {
+            "month": "2026-02",
+            "pm25": 13.84
+          },
+          {
+            "month": "2026-03",
+            "pm25": 13.1
+          },
+          {
+            "month": "2026-04",
+            "pm25": 12.13
+          },
+          {
+            "month": "2026-05",
+            "pm25": 11.12
+          },
+          {
+            "month": "2026-06",
+            "pm25": 12.54
+          }
+        ],
+        "effectiveRank": 9,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "vancouver",
+      "name": "Vancouver",
+      "country": "Canada",
+      "region": "North America",
+      "lat": 49.2827,
+      "lon": -123.1207,
+      "livabilityScore": 86,
+      "livabilityRank": 6,
+      "airQuality": {
+        "pm25AnnualMean": 11.88,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": 20.7,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 7.52
+          },
+          {
+            "month": "2026-01",
+            "pm25": 12.34
+          },
+          {
+            "month": "2026-02",
+            "pm25": 10.99
+          },
+          {
+            "month": "2026-03",
+            "pm25": 10.1
+          },
+          {
+            "month": "2026-04",
+            "pm25": 14.94
+          },
+          {
+            "month": "2026-05",
+            "pm25": 14.64
+          },
+          {
+            "month": "2026-06",
+            "pm25": 10.77
+          }
+        ],
+        "effectiveRank": 6,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "livabilityScore": 83,
+      "livabilityRank": 11,
+      "airQuality": {
+        "pm25AnnualMean": 9.19,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -26.0,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 8.89
+          },
+          {
+            "month": "2026-01",
+            "pm25": 8.34
+          },
+          {
+            "month": "2026-02",
+            "pm25": 7.63
+          },
+          {
+            "month": "2026-03",
+            "pm25": 13.45
+          },
+          {
+            "month": "2026-04",
+            "pm25": 8.51
+          },
+          {
+            "month": "2026-05",
+            "pm25": 9.04
+          },
+          {
+            "month": "2026-06",
+            "pm25": 4.22
+          }
+        ],
+        "effectiveRank": 11,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "country": "France",
+      "region": "Europe",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "livabilityScore": 85,
+      "livabilityRank": 8,
+      "airQuality": {
+        "pm25AnnualMean": 11.83,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -33.3,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 16.72
+          },
+          {
+            "month": "2026-01",
+            "pm25": 12.29
+          },
+          {
+            "month": "2026-02",
+            "pm25": 8.3
+          },
+          {
+            "month": "2026-03",
+            "pm25": 16.15
+          },
+          {
+            "month": "2026-04",
+            "pm25": 10.56
+          },
+          {
+            "month": "2026-05",
+            "pm25": 9.01
+          },
+          {
+            "month": "2026-06",
+            "pm25": 4.93
+          }
+        ],
+        "effectiveRank": 8,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "berlin",
+      "name": "Berlin",
+      "country": "Germany",
+      "region": "Europe",
+      "lat": 52.52,
+      "lon": 13.405,
+      "livabilityScore": 81,
+      "livabilityRank": 15,
+      "airQuality": {
+        "pm25AnnualMean": 11.38,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -51.0,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 13.38
+          },
+          {
+            "month": "2026-01",
+            "pm25": 15.03
+          },
+          {
+            "month": "2026-02",
+            "pm25": 14.08
+          },
+          {
+            "month": "2026-03",
+            "pm25": 12.87
+          },
+          {
+            "month": "2026-04",
+            "pm25": 8.1
+          },
+          {
+            "month": "2026-05",
+            "pm25": 6.48
+          },
+          {
+            "month": "2026-06",
+            "pm25": 5.99
+          }
+        ],
+        "effectiveRank": 15,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "country": "Netherlands",
+      "region": "Europe",
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "livabilityScore": 87,
+      "livabilityRank": 4,
+      "airQuality": {
+        "pm25AnnualMean": 11.69,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -38.9,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 11.19
+          },
+          {
+            "month": "2026-01",
+            "pm25": 14.14
+          },
+          {
+            "month": "2026-02",
+            "pm25": 11.31
+          },
+          {
+            "month": "2026-03",
+            "pm25": 15.77
+          },
+          {
+            "month": "2026-04",
+            "pm25": 9.64
+          },
+          {
+            "month": "2026-05",
+            "pm25": 8.84
+          },
+          {
+            "month": "2026-06",
+            "pm25": 6.71
+          }
+        ],
+        "effectiveRank": 4,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "stockholm",
+      "name": "Stockholm",
+      "country": "Sweden",
+      "region": "Europe",
+      "lat": 59.3293,
+      "lon": 18.0686,
+      "livabilityScore": 88,
+      "livabilityRank": 3,
+      "airQuality": {
+        "pm25AnnualMean": 4.7,
+        "whoBand": "excellent",
+        "riskLabel": "Low exposure risk",
+        "trendPercent3Mo": -32.7,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 4.16
+          },
+          {
+            "month": "2026-01",
+            "pm25": 5.12
+          },
+          {
+            "month": "2026-02",
+            "pm25": 4.86
+          },
+          {
+            "month": "2026-03",
+            "pm25": 6.94
+          },
+          {
+            "month": "2026-04",
+            "pm25": 3.62
+          },
+          {
+            "month": "2026-05",
+            "pm25": 3.43
+          },
+          {
+            "month": "2026-06",
+            "pm25": 4.33
+          }
+        ],
+        "effectiveRank": 1,
+        "rankDelta": -2,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "copenhagen",
+      "name": "Copenhagen",
+      "country": "Denmark",
+      "region": "Europe",
+      "lat": 55.6761,
+      "lon": 12.5683,
+      "livabilityScore": 89,
+      "livabilityRank": 2,
+      "airQuality": {
+        "pm25AnnualMean": 7.77,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -34.6,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 7.63
+          },
+          {
+            "month": "2026-01",
+            "pm25": 8.15
+          },
+          {
+            "month": "2026-02",
+            "pm25": 7.12
+          },
+          {
+            "month": "2026-03",
+            "pm25": 11.85
+          },
+          {
+            "month": "2026-04",
+            "pm25": 6.79
+          },
+          {
+            "month": "2026-05",
+            "pm25": 5.4
+          },
+          {
+            "month": "2026-06",
+            "pm25": 5.54
+          }
+        ],
+        "effectiveRank": 2,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "zurich",
+      "name": "Zürich",
+      "country": "Switzerland",
+      "region": "Europe",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "livabilityScore": 91,
+      "livabilityRank": 1,
+      "airQuality": {
+        "pm25AnnualMean": 12.0,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -43.1,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 17.53
+          },
+          {
+            "month": "2026-01",
+            "pm25": 13.89
+          },
+          {
+            "month": "2026-02",
+            "pm25": 9.94
+          },
+          {
+            "month": "2026-03",
+            "pm25": 15.15
+          },
+          {
+            "month": "2026-04",
+            "pm25": 10.77
+          },
+          {
+            "month": "2026-05",
+            "pm25": 7.22
+          },
+          {
+            "month": "2026-06",
+            "pm25": 4.19
+          }
+        ],
+        "effectiveRank": 1,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "country": "Japan",
+      "region": "Asia-Pacific",
+      "lat": 35.6762,
+      "lon": 139.6503,
+      "livabilityScore": 86,
+      "livabilityRank": 5,
+      "airQuality": {
+        "pm25AnnualMean": 27.57,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -35.3,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 36.28
+          },
+          {
+            "month": "2026-01",
+            "pm25": 31.87
+          },
+          {
+            "month": "2026-02",
+            "pm25": 33.21
+          },
+          {
+            "month": "2026-03",
+            "pm25": 25.78
+          },
+          {
+            "month": "2026-04",
+            "pm25": 23.24
+          },
+          {
+            "month": "2026-05",
+            "pm25": 19.67
+          },
+          {
+            "month": "2026-06",
+            "pm25": 15.86
+          }
+        ],
+        "effectiveRank": 9,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "seoul",
+      "name": "Seoul",
+      "country": "South Korea",
+      "region": "Asia-Pacific",
+      "lat": 37.5665,
+      "lon": 126.978,
+      "livabilityScore": 80,
+      "livabilityRank": 18,
+      "airQuality": {
+        "pm25AnnualMean": 32.54,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -21.1,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 31.25
+          },
+          {
+            "month": "2026-01",
+            "pm25": 25.88
+          },
+          {
+            "month": "2026-02",
+            "pm25": 33.12
+          },
+          {
+            "month": "2026-03",
+            "pm25": 47.09
+          },
+          {
+            "month": "2026-04",
+            "pm25": 30.29
+          },
+          {
+            "month": "2026-05",
+            "pm25": 28.87
+          },
+          {
+            "month": "2026-06",
+            "pm25": 24.51
+          }
+        ],
+        "effectiveRank": 22,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "country": "Singapore",
+      "region": "Asia-Pacific",
+      "lat": 1.3521,
+      "lon": 103.8198,
+      "livabilityScore": 84,
+      "livabilityRank": 10,
+      "airQuality": {
+        "pm25AnnualMean": 16.88,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -7.1,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 14.22
+          },
+          {
+            "month": "2026-01",
+            "pm25": 14.8
+          },
+          {
+            "month": "2026-02",
+            "pm25": 18.73
+          },
+          {
+            "month": "2026-03",
+            "pm25": 18.74
+          },
+          {
+            "month": "2026-04",
+            "pm25": 18.11
+          },
+          {
+            "month": "2026-05",
+            "pm25": 16.96
+          },
+          {
+            "month": "2026-06",
+            "pm25": 13.49
+          }
+        ],
+        "effectiveRank": 14,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "country": "Australia",
+      "region": "Asia-Pacific",
+      "lat": -33.8688,
+      "lon": 151.2093,
+      "livabilityScore": 85,
+      "livabilityRank": 7,
+      "airQuality": {
+        "pm25AnnualMean": 10.41,
+        "whoBand": "moderate",
+        "riskLabel": "Watch — above WHO target",
+        "trendPercent3Mo": -6.8,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 11.51
+          },
+          {
+            "month": "2026-01",
+            "pm25": 10.36
+          },
+          {
+            "month": "2026-02",
+            "pm25": 10.85
+          },
+          {
+            "month": "2026-03",
+            "pm25": 9.31
+          },
+          {
+            "month": "2026-04",
+            "pm25": 11.5
+          },
+          {
+            "month": "2026-05",
+            "pm25": 9.89
+          },
+          {
+            "month": "2026-06",
+            "pm25": 7.04
+          }
+        ],
+        "effectiveRank": 7,
+        "rankDelta": 0,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "country": "India",
+      "region": "Asia-Pacific",
+      "lat": 19.076,
+      "lon": 72.8777,
+      "livabilityScore": 58,
+      "livabilityRank": 38,
+      "airQuality": {
+        "pm25AnnualMean": 41.56,
+        "whoBand": "high",
+        "riskLabel": "High — public health priority",
+        "trendPercent3Mo": -56.9,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 49.23
+          },
+          {
+            "month": "2026-01",
+            "pm25": 59.52
+          },
+          {
+            "month": "2026-02",
+            "pm25": 64.87
+          },
+          {
+            "month": "2026-03",
+            "pm25": 34.73
+          },
+          {
+            "month": "2026-04",
+            "pm25": 28.41
+          },
+          {
+            "month": "2026-05",
+            "pm25": 20.39
+          },
+          {
+            "month": "2026-06",
+            "pm25": 19.78
+          }
+        ],
+        "effectiveRank": 46,
+        "rankDelta": 8,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "country": "China",
+      "region": "Asia-Pacific",
+      "lat": 39.9042,
+      "lon": 116.4074,
+      "livabilityScore": 65,
+      "livabilityRank": 32,
+      "airQuality": {
+        "pm25AnnualMean": 89.46,
+        "whoBand": "high",
+        "riskLabel": "High — public health priority",
+        "trendPercent3Mo": -50.9,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 141.24
+          },
+          {
+            "month": "2026-01",
+            "pm25": 115.48
+          },
+          {
+            "month": "2026-02",
+            "pm25": 101.51
+          },
+          {
+            "month": "2026-03",
+            "pm25": 92.99
+          },
+          {
+            "month": "2026-04",
+            "pm25": 58.04
+          },
+          {
+            "month": "2026-05",
+            "pm25": 47.64
+          },
+          {
+            "month": "2026-06",
+            "pm25": 46.39
+          }
+        ],
+        "effectiveRank": 40,
+        "rankDelta": 8,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "country": "India",
+      "region": "Asia-Pacific",
+      "lat": 28.6139,
+      "lon": 77.209,
+      "livabilityScore": 52,
+      "livabilityRank": 42,
+      "airQuality": {
+        "pm25AnnualMean": 96.8,
+        "whoBand": "high",
+        "riskLabel": "High — public health priority",
+        "trendPercent3Mo": -8.8,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 138.11
+          },
+          {
+            "month": "2026-01",
+            "pm25": 120.57
+          },
+          {
+            "month": "2026-02",
+            "pm25": 80.71
+          },
+          {
+            "month": "2026-03",
+            "pm25": 75.77
+          },
+          {
+            "month": "2026-04",
+            "pm25": 73.44
+          },
+          {
+            "month": "2026-05",
+            "pm25": 103.22
+          },
+          {
+            "month": "2026-06",
+            "pm25": 76.01
+          }
+        ],
+        "effectiveRank": 50,
+        "rankDelta": 8,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "dubai",
+      "name": "Dubai",
+      "country": "UAE",
+      "region": "Middle East",
+      "lat": 25.2048,
+      "lon": 55.2708,
+      "livabilityScore": 74,
+      "livabilityRank": 30,
+      "airQuality": {
+        "pm25AnnualMean": 40.58,
+        "whoBand": "high",
+        "riskLabel": "High — public health priority",
+        "trendPercent3Mo": 16.8,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 32.98
+          },
+          {
+            "month": "2026-01",
+            "pm25": 35.26
+          },
+          {
+            "month": "2026-02",
+            "pm25": 46.78
+          },
+          {
+            "month": "2026-03",
+            "pm25": 35.4
+          },
+          {
+            "month": "2026-04",
+            "pm25": 41.42
+          },
+          {
+            "month": "2026-05",
+            "pm25": 49.46
+          },
+          {
+            "month": "2026-06",
+            "pm25": 46.24
+          }
+        ],
+        "effectiveRank": 38,
+        "rankDelta": 8,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "saopaulo",
+      "name": "São Paulo",
+      "country": "Brazil",
+      "region": "South America",
+      "lat": -23.5505,
+      "lon": -46.6333,
+      "livabilityScore": 68,
+      "livabilityRank": 35,
+      "airQuality": {
+        "pm25AnnualMean": 19.12,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": 3.8,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 16.8
+          },
+          {
+            "month": "2026-01",
+            "pm25": 15.77
+          },
+          {
+            "month": "2026-02",
+            "pm25": 16.06
+          },
+          {
+            "month": "2026-03",
+            "pm25": 24.93
+          },
+          {
+            "month": "2026-04",
+            "pm25": 19.4
+          },
+          {
+            "month": "2026-05",
+            "pm25": 21.08
+          },
+          {
+            "month": "2026-06",
+            "pm25": 18.42
+          }
+        ],
+        "effectiveRank": 39,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "mexicocity",
+      "name": "Mexico City",
+      "country": "Mexico",
+      "region": "North America",
+      "lat": 19.4326,
+      "lon": -99.1332,
+      "livabilityScore": 66,
+      "livabilityRank": 33,
+      "airQuality": {
+        "pm25AnnualMean": 28.26,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -22.3,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 30.91
+          },
+          {
+            "month": "2026-01",
+            "pm25": 33.72
+          },
+          {
+            "month": "2026-02",
+            "pm25": 26.97
+          },
+          {
+            "month": "2026-03",
+            "pm25": 28.41
+          },
+          {
+            "month": "2026-04",
+            "pm25": 26.26
+          },
+          {
+            "month": "2026-05",
+            "pm25": 25.88
+          },
+          {
+            "month": "2026-06",
+            "pm25": 17.12
+          }
+        ],
+        "effectiveRank": 37,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo",
+      "country": "Egypt",
+      "region": "Middle East",
+      "lat": 30.0444,
+      "lon": 31.2357,
+      "livabilityScore": 55,
+      "livabilityRank": 40,
+      "airQuality": {
+        "pm25AnnualMean": 26.33,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": -38.6,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 21.76
+          },
+          {
+            "month": "2026-01",
+            "pm25": 36.58
+          },
+          {
+            "month": "2026-02",
+            "pm25": 32.78
+          },
+          {
+            "month": "2026-03",
+            "pm25": 25.76
+          },
+          {
+            "month": "2026-04",
+            "pm25": 24.81
+          },
+          {
+            "month": "2026-05",
+            "pm25": 17.89
+          },
+          {
+            "month": "2026-06",
+            "pm25": 15.75
+          }
+        ],
+        "effectiveRank": 44,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    },
+    {
+      "id": "johannesburg",
+      "name": "Johannesburg",
+      "country": "South Africa",
+      "region": "Africa",
+      "lat": -26.2041,
+      "lon": 28.0473,
+      "livabilityScore": 62,
+      "livabilityRank": 36,
+      "airQuality": {
+        "pm25AnnualMean": 29.61,
+        "whoBand": "elevated",
+        "riskLabel": "Elevated — policy attention",
+        "trendPercent3Mo": 61.7,
+        "monthlySeries": [
+          {
+            "month": "2025-12",
+            "pm25": 28.05
+          },
+          {
+            "month": "2026-01",
+            "pm25": 23.47
+          },
+          {
+            "month": "2026-02",
+            "pm25": 25.35
+          },
+          {
+            "month": "2026-03",
+            "pm25": 25.79
+          },
+          {
+            "month": "2026-04",
+            "pm25": 26.16
+          },
+          {
+            "month": "2026-05",
+            "pm25": 43.91
+          },
+          {
+            "month": "2026-06",
+            "pm25": 50.54
+          }
+        ],
+        "effectiveRank": 40,
+        "rankDelta": 4,
+        "dataSource": "Open-Meteo Air Quality API",
+        "periodStart": "2025-12-08",
+        "periodEnd": "2026-06-06"
+      }
+    }
+  ]
+}
