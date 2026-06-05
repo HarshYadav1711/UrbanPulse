@@ -1,0 +1,314 @@
+{
+  "generatedAt": "2026-06-06",
+  "source": {
+    "institution": "Copernicus Atmosphere Monitoring Service (CAMS)",
+    "gateway": "Open-Meteo Air Quality API",
+    "endpoint": "https://air-quality-api.open-meteo.com/v1/air-quality",
+    "variable": "pm2_5"
+  },
+  "observationWindowDays": 365,
+  "registryCities": 24,
+  "includedCities": 24,
+  "excludedCities": [],
+  "totals": {
+    "hours_total": 210816,
+    "hours_valid": 210816,
+    "hours_missing": 0,
+    "hours_discarded_sanity": 0,
+    "duplicate_timestamps_merged": 0
+  },
+  "perCity": [
+    {
+      "city_id": "nyc",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "la",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "chicago",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "toronto",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "vancouver",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "london",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "paris",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "berlin",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "amsterdam",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "stockholm",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "copenhagen",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "zurich",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "tokyo",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "seoul",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "singapore",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "sydney",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "mumbai",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "beijing",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "delhi",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "dubai",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "saopaulo",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "mexicocity",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "cairo",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    },
+    {
+      "city_id": "johannesburg",
+      "hours_total": 8784,
+      "hours_valid": 8784,
+      "hours_missing": 0,
+      "hours_discarded_sanity": 0,
+      "duplicate_timestamps_merged": 0,
+      "coverage": 1.0,
+      "excluded": false,
+      "exclusion_reason": null
+    }
+  ],
+  "processing": {
+    "discarded": [
+      "Hourly PM2.5 > 500.0 µg/m³ (sanity ceiling)",
+      "Cities with observation coverage < 50%",
+      "Cities with acquisition failures (network/API errors)",
+      "Null/missing hourly values (not imputed)"
+    ],
+    "aggregated": [
+      "Hourly → daily mean (UTC calendar day)",
+      "Daily → monthly mean (YYYY-MM)",
+      "Window mean over full observation period (pm25AnnualMean)",
+      "Trailing 90-day daily rolling mean (pm25Rolling90Day)"
+    ],
+    "assumptions": [
+      "City exposure represented by single centroid lat/lon from registry",
+      "CAMS model concentrations used for cross-city comparability",
+      "Duplicate timestamps averaged (rare)",
+      "WHO 2021 bands applied to window mean PM2.5",
+      "Trend = last 3 monthly means vs prior 3 monthly means (% change)",
+      "Effective rank = baseline livability rank + exposure band penalty"
+    ],
+    "limitations": [
+      "Model/reanalysis values — not municipal monitor readings",
+      "Point estimate may not reflect intra-city variation",
+      "Livability baseline is static, not co-fetched with air quality",
+      "Rolling 90-day metric requires sufficient daily coverage at window start"
+    ]
+  }
+}

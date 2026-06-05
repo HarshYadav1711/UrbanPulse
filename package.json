@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "data:fetch": "python scripts/fetch_air_quality.py"
+    "data:fetch": "python scripts/ingest/build.py"
   },
   "dependencies": {
     "date-fns": "^4.1.0",

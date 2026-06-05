@@ -10,6 +10,8 @@ export const monthlyPm25Schema = z.object({
 
 export const airQualitySchema = z.object({
   pm25AnnualMean: z.number().nonnegative(),
+  pm25Rolling90Day: z.number().nonnegative(),
+  observationCoverage: z.number().min(0).max(1),
   whoBand: whoBandSchema,
   riskLabel: z.string().min(1),
   trendPercent3Mo: z.number(),

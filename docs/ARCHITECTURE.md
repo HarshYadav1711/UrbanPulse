@@ -12,10 +12,10 @@ City ranking dashboards (livability indices, quality-of-life scores) help compar
 
 | Attribute | Value |
 |-----------|--------|
-| **Source** | [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) |
-| **Access** | Free, no API key, no billing |
-| **Variable** | Hourly PM2.5 (µg/m³) at city coordinates |
-| **Why this dataset** | City-relevant, globally available, maintained, reproducible, directly tied to WHO liveability / health guidance |
+| **Institutional source** | [Copernicus Atmosphere Monitoring Service (CAMS)](https://atmosphere.copernicus.eu/) — EU ECMWF-operated atmospheric composition service |
+| **Acquisition gateway** | [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) (free, no API key) |
+| **Variable** | Hourly PM2.5 (µg/m³) at city centroid coordinates |
+| **Documentation** | [`docs/DATA_SOURCE.md`](DATA_SOURCE.md) · quality note [`docs/DATA_QUALITY.md`](DATA_QUALITY.md) |
 
 **Secondary (static baseline):** Livability rank and score per city — compiled once from public indicator bands (OECD, UN-Habitat, Mercer QoL ranges). Not fetched live; documented in pipeline README. Keeps the **environmental** dataset auditable as the single dynamic source.
 
@@ -66,18 +66,23 @@ AirQuality
 ## 4. Transformation pipeline
 
 ```
-Open-Meteo API (hourly PM2.5)
+Copernicus CAMS (via Open-Meteo Air Quality API)
         │
         ▼
-scripts/fetch_air_quality.py
-  • Fixed city registry (lat/lon + baseline livability)
-  • Fetch hourly PM2.5 (180-day window)
-  • Aggregate → monthly means
-  • Compute annual mean, WHO band, 3-mo trend
-  • Compute effectiveRank / rankDelta
+scripts/ingest/acquire.py
+  • Hourly pm2_5 per city centroid (config registry)
         │
         ▼
-public/data/cities.json          ← app-ready artifact
+scripts/ingest/transform.py
+  • Normalize timestamps (UTC)
+  • Dedupe hours · discard sanity outliers · no imputation
+  • Aggregate daily → monthly · window mean · 90-day rolling
+  • WHO band · trend · effective rank
+        │
+        ▼
+scripts/ingest/build.py
+  • public/data/cities.json + cities.csv + data_quality.json
+  • docs/DATA_QUALITY.md (auto-generated)
         │
         ▼
 src/lib/cities.ts
@@ -89,7 +94,7 @@ src/lib/cities.ts
 React app shell (panels consume CityRecord[])
 ```
 
-**Reproduce:** `npm run data:fetch` or `python scripts/fetch_air_quality.py`
+**Reproduce:** `npm run data:fetch` or `python scripts/ingest/build.py`
 
 ---
 
@@ -116,7 +121,12 @@ UrbanPulse/
 │   └── data/
 │       └── cities.json          ← validated app data (SSOT on disk)
 ├── scripts/
-│   └── fetch_air_quality.py     ← raw → app-ready pipeline
+│   ├── config/
+│   │   └── cities_registry.json ← canonical city names + coordinates
+│   └── ingest/
+│       ├── acquire.py           ← CAMS via Open-Meteo HTTP
+│       ├── transform.py         ← clean · aggregate · metrics
+│       └── build.py             ← CLI entry · JSON/CSV export
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx

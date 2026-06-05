@@ -1,9 +1,9 @@
 {
   "generatedAt": "2026-06-06",
   "methodology": {
-    "airQuality": "Open-Meteo Air Quality API — hourly PM2.5 aggregated to monthly means",
+    "airQuality": "Copernicus CAMS PM2.5 via Open-Meteo — hourly observations cleaned and aggregated to city-level metrics",
     "whoThresholds": "Excellent ≤5, Moderate ≤15, Elevated ≤35, High >35 µg/m³ (WHO 2021)",
-    "livabilityBaseline": "Static composite from public urban quality indicators (see README)"
+    "livabilityBaseline": "Static composite from public urban quality indicators (scripts/config/cities_registry.json)"
   },
   "cities": [
     {
@@ -16,14 +16,40 @@
       "livabilityScore": 82,
       "livabilityRank": 12,
       "airQuality": {
-        "pm25AnnualMean": 14.31,
+        "pm25AnnualMean": 14.18,
+        "pm25Rolling90Day": 11.92,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -24.2,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 18.22
+          },
+          {
+            "month": "2025-07",
+            "pm25": 17.18
+          },
+          {
+            "month": "2025-08",
+            "pm25": 15.82
+          },
+          {
+            "month": "2025-09",
+            "pm25": 13.82
+          },
+          {
+            "month": "2025-10",
+            "pm25": 8.44
+          },
+          {
+            "month": "2025-11",
+            "pm25": 11.69
+          },
+          {
             "month": "2025-12",
-            "pm25": 11.94
+            "pm25": 12.3
           },
           {
             "month": "2026-01",
@@ -52,8 +78,8 @@
         ],
         "effectiveRank": 12,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -67,14 +93,40 @@
       "livabilityScore": 76,
       "livabilityRank": 28,
       "airQuality": {
-        "pm25AnnualMean": 22.28,
+        "pm25AnnualMean": 22.88,
+        "pm25Rolling90Day": 20.6,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -22.4,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 19.95
+          },
+          {
+            "month": "2025-07",
+            "pm25": 17.8
+          },
+          {
+            "month": "2025-08",
+            "pm25": 26.41
+          },
+          {
+            "month": "2025-09",
+            "pm25": 22.53
+          },
+          {
+            "month": "2025-10",
+            "pm25": 23.46
+          },
+          {
+            "month": "2025-11",
+            "pm25": 28.72
+          },
+          {
             "month": "2025-12",
-            "pm25": 27.61
+            "pm25": 28.03
           },
           {
             "month": "2026-01",
@@ -103,8 +155,8 @@
         ],
         "effectiveRank": 32,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -118,14 +170,40 @@
       "livabilityScore": 78,
       "livabilityRank": 22,
       "airQuality": {
-        "pm25AnnualMean": 10.49,
+        "pm25AnnualMean": 11.05,
+        "pm25Rolling90Day": 9.5,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -20.3,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 16.51
+          },
+          {
+            "month": "2025-07",
+            "pm25": 15.21
+          },
+          {
+            "month": "2025-08",
+            "pm25": 13.1
+          },
+          {
+            "month": "2025-09",
+            "pm25": 11.39
+          },
+          {
+            "month": "2025-10",
+            "pm25": 6.7
+          },
+          {
+            "month": "2025-11",
+            "pm25": 7.45
+          },
+          {
             "month": "2025-12",
-            "pm25": 10.32
+            "pm25": 10.63
           },
           {
             "month": "2026-01",
@@ -154,8 +232,8 @@
         ],
         "effectiveRank": 22,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -169,14 +247,40 @@
       "livabilityScore": 84,
       "livabilityRank": 9,
       "airQuality": {
-        "pm25AnnualMean": 10.64,
+        "pm25AnnualMean": 11.07,
+        "pm25Rolling90Day": 11.75,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": 5.0,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 19.04
+          },
+          {
+            "month": "2025-07",
+            "pm25": 16.87
+          },
+          {
+            "month": "2025-08",
+            "pm25": 13.83
+          },
+          {
+            "month": "2025-09",
+            "pm25": 11.42
+          },
+          {
+            "month": "2025-10",
+            "pm25": 5.44
+          },
+          {
+            "month": "2025-11",
+            "pm25": 5.14
+          },
+          {
             "month": "2025-12",
-            "pm25": 5.26
+            "pm25": 5.11
           },
           {
             "month": "2026-01",
@@ -205,8 +309,8 @@
         ],
         "effectiveRank": 9,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -220,14 +324,40 @@
       "livabilityScore": 86,
       "livabilityRank": 6,
       "airQuality": {
-        "pm25AnnualMean": 11.88,
+        "pm25AnnualMean": 13.11,
+        "pm25Rolling90Day": 13.2,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": 20.7,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 15.17
+          },
+          {
+            "month": "2025-07",
+            "pm25": 12.93
+          },
+          {
+            "month": "2025-08",
+            "pm25": 16.93
+          },
+          {
+            "month": "2025-09",
+            "pm25": 19.8
+          },
+          {
+            "month": "2025-10",
+            "pm25": 11.53
+          },
+          {
+            "month": "2025-11",
+            "pm25": 9.73
+          },
+          {
             "month": "2025-12",
-            "pm25": 7.52
+            "pm25": 9.01
           },
           {
             "month": "2026-01",
@@ -256,8 +386,8 @@
         ],
         "effectiveRank": 6,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -271,14 +401,40 @@
       "livabilityScore": 83,
       "livabilityRank": 11,
       "airQuality": {
-        "pm25AnnualMean": 9.19,
+        "pm25AnnualMean": 7.96,
+        "pm25Rolling90Day": 9.29,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -26.0,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 6.98
+          },
+          {
+            "month": "2025-07",
+            "pm25": 5.81
+          },
+          {
+            "month": "2025-08",
+            "pm25": 7.01
+          },
+          {
+            "month": "2025-09",
+            "pm25": 6.26
+          },
+          {
+            "month": "2025-10",
+            "pm25": 7.83
+          },
+          {
+            "month": "2025-11",
+            "pm25": 6.95
+          },
+          {
             "month": "2025-12",
-            "pm25": 8.89
+            "pm25": 8.2
           },
           {
             "month": "2026-01",
@@ -307,8 +463,8 @@
         ],
         "effectiveRank": 11,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -322,14 +478,40 @@
       "livabilityScore": 85,
       "livabilityRank": 8,
       "airQuality": {
-        "pm25AnnualMean": 11.83,
+        "pm25AnnualMean": 9.8,
+        "pm25Rolling90Day": 10.49,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -33.3,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 7.45
+          },
+          {
+            "month": "2025-07",
+            "pm25": 6.26
+          },
+          {
+            "month": "2025-08",
+            "pm25": 7.13
+          },
+          {
+            "month": "2025-09",
+            "pm25": 6.77
+          },
+          {
+            "month": "2025-10",
+            "pm25": 9.24
+          },
+          {
+            "month": "2025-11",
+            "pm25": 9.83
+          },
+          {
             "month": "2025-12",
-            "pm25": 16.72
+            "pm25": 14.9
           },
           {
             "month": "2026-01",
@@ -358,8 +540,8 @@
         ],
         "effectiveRank": 8,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -373,14 +555,40 @@
       "livabilityScore": 81,
       "livabilityRank": 15,
       "airQuality": {
-        "pm25AnnualMean": 11.38,
+        "pm25AnnualMean": 9.5,
+        "pm25Rolling90Day": 8.4,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -51.0,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 5.74
+          },
+          {
+            "month": "2025-07",
+            "pm25": 5.67
+          },
+          {
+            "month": "2025-08",
+            "pm25": 6.77
+          },
+          {
+            "month": "2025-09",
+            "pm25": 6.4
+          },
+          {
+            "month": "2025-10",
+            "pm25": 7.09
+          },
+          {
+            "month": "2025-11",
+            "pm25": 11.82
+          },
+          {
             "month": "2025-12",
-            "pm25": 13.38
+            "pm25": 14.29
           },
           {
             "month": "2026-01",
@@ -409,8 +617,8 @@
         ],
         "effectiveRank": 15,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -424,14 +632,40 @@
       "livabilityScore": 87,
       "livabilityRank": 4,
       "airQuality": {
-        "pm25AnnualMean": 11.69,
+        "pm25AnnualMean": 10.12,
+        "pm25Rolling90Day": 10.17,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -38.9,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 8.43
+          },
+          {
+            "month": "2025-07",
+            "pm25": 7.86
+          },
+          {
+            "month": "2025-08",
+            "pm25": 9.21
+          },
+          {
+            "month": "2025-09",
+            "pm25": 8.49
+          },
+          {
+            "month": "2025-10",
+            "pm25": 7.86
+          },
+          {
+            "month": "2025-11",
+            "pm25": 9.56
+          },
+          {
             "month": "2025-12",
-            "pm25": 11.19
+            "pm25": 10.75
           },
           {
             "month": "2026-01",
@@ -460,8 +694,8 @@
         ],
         "effectiveRank": 4,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -475,14 +709,40 @@
       "livabilityScore": 88,
       "livabilityRank": 3,
       "airQuality": {
-        "pm25AnnualMean": 4.7,
+        "pm25AnnualMean": 4.73,
+        "pm25Rolling90Day": 4.5,
+        "observationCoverage": 1.0,
         "whoBand": "excellent",
         "riskLabel": "Low exposure risk",
         "trendPercent3Mo": -32.7,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 3.26
+          },
+          {
+            "month": "2025-07",
+            "pm25": 5.45
+          },
+          {
+            "month": "2025-08",
+            "pm25": 3.78
+          },
+          {
+            "month": "2025-09",
+            "pm25": 4.82
+          },
+          {
+            "month": "2025-10",
+            "pm25": 4.43
+          },
+          {
+            "month": "2025-11",
+            "pm25": 5.69
+          },
+          {
             "month": "2025-12",
-            "pm25": 4.16
+            "pm25": 5.18
           },
           {
             "month": "2026-01",
@@ -511,8 +771,8 @@
         ],
         "effectiveRank": 1,
         "rankDelta": -2,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -526,14 +786,40 @@
       "livabilityScore": 89,
       "livabilityRank": 2,
       "airQuality": {
-        "pm25AnnualMean": 7.77,
+        "pm25AnnualMean": 6.93,
+        "pm25Rolling90Day": 7.37,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -34.6,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 5.13
+          },
+          {
+            "month": "2025-07",
+            "pm25": 5.61
+          },
+          {
+            "month": "2025-08",
+            "pm25": 5.64
+          },
+          {
+            "month": "2025-09",
+            "pm25": 5.08
+          },
+          {
+            "month": "2025-10",
+            "pm25": 5.05
+          },
+          {
+            "month": "2025-11",
+            "pm25": 8.88
+          },
+          {
             "month": "2025-12",
-            "pm25": 7.63
+            "pm25": 8.42
           },
           {
             "month": "2026-01",
@@ -562,8 +848,8 @@
         ],
         "effectiveRank": 2,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -577,14 +863,40 @@
       "livabilityScore": 91,
       "livabilityRank": 1,
       "airQuality": {
-        "pm25AnnualMean": 12.0,
+        "pm25AnnualMean": 10.45,
+        "pm25Rolling90Day": 9.52,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -43.1,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 8.11
+          },
+          {
+            "month": "2025-07",
+            "pm25": 5.79
+          },
+          {
+            "month": "2025-08",
+            "pm25": 9.25
+          },
+          {
+            "month": "2025-09",
+            "pm25": 6.84
+          },
+          {
+            "month": "2025-10",
+            "pm25": 9.33
+          },
+          {
+            "month": "2025-11",
+            "pm25": 13.15
+          },
+          {
             "month": "2025-12",
-            "pm25": 17.53
+            "pm25": 16.61
           },
           {
             "month": "2026-01",
@@ -613,8 +925,8 @@
         ],
         "effectiveRank": 1,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -628,14 +940,40 @@
       "livabilityScore": 86,
       "livabilityRank": 5,
       "airQuality": {
-        "pm25AnnualMean": 27.57,
+        "pm25AnnualMean": 26.46,
+        "pm25Rolling90Day": 22.72,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -35.3,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 23.13
+          },
+          {
+            "month": "2025-07",
+            "pm25": 17.47
+          },
+          {
+            "month": "2025-08",
+            "pm25": 25.37
+          },
+          {
+            "month": "2025-09",
+            "pm25": 22.29
+          },
+          {
+            "month": "2025-10",
+            "pm25": 23.24
+          },
+          {
+            "month": "2025-11",
+            "pm25": 37.13
+          },
+          {
             "month": "2025-12",
-            "pm25": 36.28
+            "pm25": 37.22
           },
           {
             "month": "2026-01",
@@ -664,8 +1002,8 @@
         ],
         "effectiveRank": 9,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -679,18 +1017,44 @@
       "livabilityScore": 80,
       "livabilityRank": 18,
       "airQuality": {
-        "pm25AnnualMean": 32.54,
+        "pm25AnnualMean": 29.29,
+        "pm25Rolling90Day": 35.7,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -21.1,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 29.38
+          },
+          {
+            "month": "2025-07",
+            "pm25": 22.96
+          },
+          {
+            "month": "2025-08",
+            "pm25": 25.53
+          },
+          {
+            "month": "2025-09",
+            "pm25": 24.21
+          },
+          {
+            "month": "2025-10",
+            "pm25": 20.94
+          },
+          {
+            "month": "2025-11",
+            "pm25": 34.67
+          },
+          {
             "month": "2025-12",
-            "pm25": 31.25
+            "pm25": 29.95
           },
           {
             "month": "2026-01",
-            "pm25": 25.88
+            "pm25": 25.87
           },
           {
             "month": "2026-02",
@@ -715,8 +1079,8 @@
         ],
         "effectiveRank": 22,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -730,14 +1094,40 @@
       "livabilityScore": 84,
       "livabilityRank": 10,
       "airQuality": {
-        "pm25AnnualMean": 16.88,
+        "pm25AnnualMean": 17.57,
+        "pm25Rolling90Day": 17.42,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -7.1,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 20.9
+          },
+          {
+            "month": "2025-07",
+            "pm25": 19.37
+          },
+          {
+            "month": "2025-08",
+            "pm25": 14.91
+          },
+          {
+            "month": "2025-09",
+            "pm25": 15.78
+          },
+          {
+            "month": "2025-10",
+            "pm25": 20.61
+          },
+          {
+            "month": "2025-11",
+            "pm25": 18.19
+          },
+          {
             "month": "2025-12",
-            "pm25": 14.22
+            "pm25": 15.3
           },
           {
             "month": "2026-01",
@@ -766,8 +1156,8 @@
         ],
         "effectiveRank": 14,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -781,14 +1171,40 @@
       "livabilityScore": 85,
       "livabilityRank": 7,
       "airQuality": {
-        "pm25AnnualMean": 10.41,
+        "pm25AnnualMean": 9.71,
+        "pm25Rolling90Day": 9.96,
+        "observationCoverage": 1.0,
         "whoBand": "moderate",
         "riskLabel": "Watch — above WHO target",
         "trendPercent3Mo": -6.8,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 10.68
+          },
+          {
+            "month": "2025-07",
+            "pm25": 8.56
+          },
+          {
+            "month": "2025-08",
+            "pm25": 7.6
+          },
+          {
+            "month": "2025-09",
+            "pm25": 9.49
+          },
+          {
+            "month": "2025-10",
+            "pm25": 9.06
+          },
+          {
+            "month": "2025-11",
+            "pm25": 8.94
+          },
+          {
             "month": "2025-12",
-            "pm25": 11.51
+            "pm25": 11.09
           },
           {
             "month": "2026-01",
@@ -817,8 +1233,8 @@
         ],
         "effectiveRank": 7,
         "rankDelta": 0,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -832,14 +1248,40 @@
       "livabilityScore": 58,
       "livabilityRank": 38,
       "airQuality": {
-        "pm25AnnualMean": 41.56,
+        "pm25AnnualMean": 35.51,
+        "pm25Rolling90Day": 26.43,
+        "observationCoverage": 1.0,
         "whoBand": "high",
         "riskLabel": "High — public health priority",
         "trendPercent3Mo": -56.9,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 20.45
+          },
+          {
+            "month": "2025-07",
+            "pm25": 19.78
+          },
+          {
+            "month": "2025-08",
+            "pm25": 19.14
+          },
+          {
+            "month": "2025-09",
+            "pm25": 19.26
+          },
+          {
+            "month": "2025-10",
+            "pm25": 35.46
+          },
+          {
+            "month": "2025-11",
+            "pm25": 54.72
+          },
+          {
             "month": "2025-12",
-            "pm25": 49.23
+            "pm25": 52.27
           },
           {
             "month": "2026-01",
@@ -868,8 +1310,8 @@
         ],
         "effectiveRank": 46,
         "rankDelta": 8,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -883,14 +1325,40 @@
       "livabilityScore": 65,
       "livabilityRank": 32,
       "airQuality": {
-        "pm25AnnualMean": 89.46,
+        "pm25AnnualMean": 85.18,
+        "pm25Rolling90Day": 62.14,
+        "observationCoverage": 1.0,
         "whoBand": "high",
         "riskLabel": "High — public health priority",
         "trendPercent3Mo": -50.9,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 56.24
+          },
+          {
+            "month": "2025-07",
+            "pm25": 60.7
+          },
+          {
+            "month": "2025-08",
+            "pm25": 80.26
+          },
+          {
+            "month": "2025-09",
+            "pm25": 79.34
+          },
+          {
+            "month": "2025-10",
+            "pm25": 93.88
+          },
+          {
+            "month": "2025-11",
+            "pm25": 108.31
+          },
+          {
             "month": "2025-12",
-            "pm25": 141.24
+            "pm25": 130.98
           },
           {
             "month": "2026-01",
@@ -919,8 +1387,8 @@
         ],
         "effectiveRank": 40,
         "rankDelta": 8,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -934,14 +1402,40 @@
       "livabilityScore": 52,
       "livabilityRank": 42,
       "airQuality": {
-        "pm25AnnualMean": 96.8,
+        "pm25AnnualMean": 82.46,
+        "pm25Rolling90Day": 83.56,
+        "observationCoverage": 1.0,
         "whoBand": "high",
         "riskLabel": "High — public health priority",
         "trendPercent3Mo": -8.8,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 71.54
+          },
+          {
+            "month": "2025-07",
+            "pm25": 58.36
+          },
+          {
+            "month": "2025-08",
+            "pm25": 62.94
+          },
+          {
+            "month": "2025-09",
+            "pm25": 42.12
+          },
+          {
+            "month": "2025-10",
+            "pm25": 70.12
+          },
+          {
+            "month": "2025-11",
+            "pm25": 101.42
+          },
+          {
             "month": "2025-12",
-            "pm25": 138.11
+            "pm25": 127.28
           },
           {
             "month": "2026-01",
@@ -970,29 +1464,55 @@
         ],
         "effectiveRank": 50,
         "rankDelta": 8,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
     {
       "id": "dubai",
       "name": "Dubai",
-      "country": "UAE",
+      "country": "United Arab Emirates",
       "region": "Middle East",
       "lat": 25.2048,
       "lon": 55.2708,
       "livabilityScore": 74,
       "livabilityRank": 30,
       "airQuality": {
-        "pm25AnnualMean": 40.58,
+        "pm25AnnualMean": 44.44,
+        "pm25Rolling90Day": 42.9,
+        "observationCoverage": 1.0,
         "whoBand": "high",
         "riskLabel": "High — public health priority",
         "trendPercent3Mo": 16.8,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 47.33
+          },
+          {
+            "month": "2025-07",
+            "pm25": 58.83
+          },
+          {
+            "month": "2025-08",
+            "pm25": 57.57
+          },
+          {
+            "month": "2025-09",
+            "pm25": 46.28
+          },
+          {
+            "month": "2025-10",
+            "pm25": 39.23
+          },
+          {
+            "month": "2025-11",
+            "pm25": 39.96
+          },
+          {
             "month": "2025-12",
-            "pm25": 32.98
+            "pm25": 36.05
           },
           {
             "month": "2026-01",
@@ -1021,8 +1541,8 @@
         ],
         "effectiveRank": 38,
         "rankDelta": 8,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -1036,14 +1556,40 @@
       "livabilityScore": 68,
       "livabilityRank": 35,
       "airQuality": {
-        "pm25AnnualMean": 19.12,
+        "pm25AnnualMean": 20.14,
+        "pm25Rolling90Day": 21.83,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": 3.8,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 18.04
+          },
+          {
+            "month": "2025-07",
+            "pm25": 26.58
+          },
+          {
+            "month": "2025-08",
+            "pm25": 22.82
+          },
+          {
+            "month": "2025-09",
+            "pm25": 19.74
+          },
+          {
+            "month": "2025-10",
+            "pm25": 19.52
+          },
+          {
+            "month": "2025-11",
+            "pm25": 19.04
+          },
+          {
             "month": "2025-12",
-            "pm25": 16.8
+            "pm25": 18.09
           },
           {
             "month": "2026-01",
@@ -1072,8 +1618,8 @@
         ],
         "effectiveRank": 39,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -1087,14 +1633,40 @@
       "livabilityScore": 66,
       "livabilityRank": 33,
       "airQuality": {
-        "pm25AnnualMean": 28.26,
+        "pm25AnnualMean": 28.2,
+        "pm25Rolling90Day": 25.67,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -22.3,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 23.38
+          },
+          {
+            "month": "2025-07",
+            "pm25": 34.46
+          },
+          {
+            "month": "2025-08",
+            "pm25": 29.91
+          },
+          {
+            "month": "2025-09",
+            "pm25": 24.84
+          },
+          {
+            "month": "2025-10",
+            "pm25": 24.69
+          },
+          {
+            "month": "2025-11",
+            "pm25": 27.77
+          },
+          {
             "month": "2025-12",
-            "pm25": 30.91
+            "pm25": 33.02
           },
           {
             "month": "2026-01",
@@ -1123,8 +1695,8 @@
         ],
         "effectiveRank": 37,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -1138,14 +1710,40 @@
       "livabilityScore": 55,
       "livabilityRank": 40,
       "airQuality": {
-        "pm25AnnualMean": 26.33,
+        "pm25AnnualMean": 24.03,
+        "pm25Rolling90Day": 22.0,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": -38.6,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 20.95
+          },
+          {
+            "month": "2025-07",
+            "pm25": 21.91
+          },
+          {
+            "month": "2025-08",
+            "pm25": 20.29
+          },
+          {
+            "month": "2025-09",
+            "pm25": 21.05
+          },
+          {
+            "month": "2025-10",
+            "pm25": 19.43
+          },
+          {
+            "month": "2025-11",
+            "pm25": 26.48
+          },
+          {
             "month": "2025-12",
-            "pm25": 21.76
+            "pm25": 22.26
           },
           {
             "month": "2026-01",
@@ -1174,8 +1772,8 @@
         ],
         "effectiveRank": 44,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     },
@@ -1189,14 +1787,40 @@
       "livabilityScore": 62,
       "livabilityRank": 36,
       "airQuality": {
-        "pm25AnnualMean": 29.61,
+        "pm25AnnualMean": 33.56,
+        "pm25Rolling90Day": 34.69,
+        "observationCoverage": 1.0,
         "whoBand": "elevated",
         "riskLabel": "Elevated — policy attention",
         "trendPercent3Mo": 61.7,
         "monthlySeries": [
           {
+            "month": "2025-06",
+            "pm25": 52.0
+          },
+          {
+            "month": "2025-07",
+            "pm25": 60.22
+          },
+          {
+            "month": "2025-08",
+            "pm25": 37.78
+          },
+          {
+            "month": "2025-09",
+            "pm25": 25.94
+          },
+          {
+            "month": "2025-10",
+            "pm25": 23.82
+          },
+          {
+            "month": "2025-11",
+            "pm25": 28.62
+          },
+          {
             "month": "2025-12",
-            "pm25": 28.05
+            "pm25": 28.47
           },
           {
             "month": "2026-01",
@@ -1225,8 +1849,8 @@
         ],
         "effectiveRank": 40,
         "rankDelta": 4,
-        "dataSource": "Open-Meteo Air Quality API",
-        "periodStart": "2025-12-08",
+        "dataSource": "Copernicus CAMS via Open-Meteo Air Quality API",
+        "periodStart": "2025-06-06",
         "periodEnd": "2026-06-06"
       }
     }

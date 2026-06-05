@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "cities": [
+    { "id": "nyc", "canonicalName": "New York", "aliases": ["New York City", "NYC"], "country": "United States", "region": "North America", "lat": 40.7128, "lon": -74.006, "livabilityScore": 82, "livabilityRank": 12 },
+    { "id": "la", "canonicalName": "Los Angeles", "aliases": ["LA"], "country": "United States", "region": "North America", "lat": 34.0522, "lon": -118.2437, "livabilityScore": 76, "livabilityRank": 28 },
+    { "id": "chicago", "canonicalName": "Chicago", "aliases": [], "country": "United States", "region": "North America", "lat": 41.8781, "lon": -87.6298, "livabilityScore": 78, "livabilityRank": 22 },
+    { "id": "toronto", "canonicalName": "Toronto", "aliases": [], "country": "Canada", "region": "North America", "lat": 43.6532, "lon": -79.3832, "livabilityScore": 84, "livabilityRank": 9 },
+    { "id": "vancouver", "canonicalName": "Vancouver", "aliases": [], "country": "Canada", "region": "North America", "lat": 49.2827, "lon": -123.1207, "livabilityScore": 86, "livabilityRank": 6 },
+    { "id": "london", "canonicalName": "London", "aliases": [], "country": "United Kingdom", "region": "Europe", "lat": 51.5074, "lon": -0.1278, "livabilityScore": 83, "livabilityRank": 11 },
+    { "id": "paris", "canonicalName": "Paris", "aliases": [], "country": "France", "region": "Europe", "lat": 48.8566, "lon": 2.3522, "livabilityScore": 85, "livabilityRank": 8 },
+    { "id": "berlin", "canonicalName": "Berlin", "aliases": [], "country": "Germany", "region": "Europe", "lat": 52.52, "lon": 13.405, "livabilityScore": 81, "livabilityRank": 15 },
+    { "id": "amsterdam", "canonicalName": "Amsterdam", "aliases": [], "country": "Netherlands", "region": "Europe", "lat": 52.3676, "lon": 4.9041, "livabilityScore": 87, "livabilityRank": 4 },
+    { "id": "stockholm", "canonicalName": "Stockholm", "aliases": [], "country": "Sweden", "region": "Europe", "lat": 59.3293, "lon": 18.0686, "livabilityScore": 88, "livabilityRank": 3 },
+    { "id": "copenhagen", "canonicalName": "Copenhagen", "aliases": ["København"], "country": "Denmark", "region": "Europe", "lat": 55.6761, "lon": 12.5683, "livabilityScore": 89, "livabilityRank": 2 },
+    { "id": "zurich", "canonicalName": "Zürich", "aliases": ["Zurich"], "country": "Switzerland", "region": "Europe", "lat": 47.3769, "lon": 8.5417, "livabilityScore": 91, "livabilityRank": 1 },
+    { "id": "tokyo", "canonicalName": "Tokyo", "aliases": [], "country": "Japan", "region": "Asia-Pacific", "lat": 35.6762, "lon": 139.6503, "livabilityScore": 86, "livabilityRank": 5 },
+    { "id": "seoul", "canonicalName": "Seoul", "aliases": [], "country": "South Korea", "region": "Asia-Pacific", "lat": 37.5665, "lon": 126.978, "livabilityScore": 80, "livabilityRank": 18 },
+    { "id": "singapore", "canonicalName": "Singapore", "aliases": [], "country": "Singapore", "region": "Asia-Pacific", "lat": 1.3521, "lon": 103.8198, "livabilityScore": 84, "livabilityRank": 10 },
+    { "id": "sydney", "canonicalName": "Sydney", "aliases": [], "country": "Australia", "region": "Asia-Pacific", "lat": -33.8688, "lon": 151.2093, "livabilityScore": 85, "livabilityRank": 7 },
+    { "id": "mumbai", "canonicalName": "Mumbai", "aliases": ["Bombay"], "country": "India", "region": "Asia-Pacific", "lat": 19.076, "lon": 72.8777, "livabilityScore": 58, "livabilityRank": 38 },
+    { "id": "beijing", "canonicalName": "Beijing", "aliases": ["Peking"], "country": "China", "region": "Asia-Pacific", "lat": 39.9042, "lon": 116.4074, "livabilityScore": 65, "livabilityRank": 32 },
+    { "id": "delhi", "canonicalName": "Delhi", "aliases": ["New Delhi"], "country": "India", "region": "Asia-Pacific", "lat": 28.6139, "lon": 77.209, "livabilityScore": 52, "livabilityRank": 42 },
+    { "id": "dubai", "canonicalName": "Dubai", "aliases": [], "country": "United Arab Emirates", "region": "Middle East", "lat": 25.2048, "lon": 55.2708, "livabilityScore": 74, "livabilityRank": 30 },
+    { "id": "saopaulo", "canonicalName": "São Paulo", "aliases": ["Sao Paulo"], "country": "Brazil", "region": "South America", "lat": -23.5505, "lon": -46.6333, "livabilityScore": 68, "livabilityRank": 35 },
+    { "id": "mexicocity", "canonicalName": "Mexico City", "aliases": ["Ciudad de México"], "country": "Mexico", "region": "North America", "lat": 19.4326, "lon": -99.1332, "livabilityScore": 66, "livabilityRank": 33 },
+    { "id": "cairo", "canonicalName": "Cairo", "aliases": ["Al Qahirah"], "country": "Egypt", "region": "Middle East", "lat": 30.0444, "lon": 31.2357, "livabilityScore": 55, "livabilityRank": 40 },
+    { "id": "johannesburg", "canonicalName": "Johannesburg", "aliases": ["Joburg"], "country": "South Africa", "region": "Africa", "lat": -26.2041, "lon": 28.0473, "livabilityScore": 62, "livabilityRank": 36 }
+  ]
+}
