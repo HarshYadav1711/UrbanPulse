@@ -1,47 +1,57 @@
-import { Panel } from "@/components/ui/Panel";
-import { StatePlaceholder } from "@/components/ui/StatePlaceholder";
+"use client";
+
+import dynamic from "next/dynamic";
 import type { CityRecord } from "@/lib/schema";
 import { WHO_BAND_META } from "@/lib/constants";
-import { formatPm25 } from "@/lib/format";
+import { Panel } from "@/components/ui/Panel";
+import type { WhoBand } from "@/lib/schema";
+
+const CityMap = dynamic(
+  () => import("@/components/map/CityMap").then((m) => m.CityMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-80 items-center justify-center rounded-lg border border-dashed border-[var(--line)] bg-slate-50 text-xs text-[var(--ink-muted)]">
+        Loading map…
+      </div>
+    ),
+  }
+);
 
 interface MapPanelProps {
   cities: CityRecord[];
 }
+
+const LEGEND_BANDS: WhoBand[] = ["excellent", "moderate", "elevated", "high"];
 
 export function MapPanel({ cities }: MapPanelProps) {
   return (
     <Panel
       id="map"
       title="Exposure map"
-      description="Geospatial view — Leaflet wiring pending"
+      description="City-centroid PM2.5 exposure — click markers for detail"
     >
-      <StatePlaceholder
-        variant="loading"
-        title="Map shell"
-        message="Markers will use lat, lon, and whoBand from the data contract."
-      />
-      <ul className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {cities.slice(0, 6).map((city) => {
-          const band = WHO_BAND_META[city.airQuality.whoBand];
+      <CityMap cities={cities} />
+
+      <div className="mt-4 flex flex-wrap items-center gap-4">
+        <span className="text-[10px] font-medium uppercase tracking-wide text-[var(--ink-muted)]">
+          WHO band
+        </span>
+        {LEGEND_BANDS.map((band) => {
+          const meta = WHO_BAND_META[band];
           return (
-            <li
-              key={city.id}
-              className="flex items-center gap-2 rounded-lg border border-[var(--line)] px-3 py-2 text-xs"
-            >
-              <span className={`h-2 w-2 shrink-0 rounded-full ${band.swatch}`} />
-              <span className="font-medium text-[var(--ink)]">{city.name}</span>
-              <span className="ml-auto font-mono text-[var(--ink-muted)]">
-                {formatPm25(city.airQuality.pm25AnnualMean)}
-              </span>
-            </li>
+            <span key={band} className="flex items-center gap-1.5 text-xs text-[var(--ink-muted)]">
+              <span className={`h-2.5 w-2.5 rounded-full ${meta.swatch}`} />
+              {meta.label}
+            </span>
           );
         })}
-      </ul>
-      {cities.length > 6 && (
-        <p className="mt-2 text-xs text-[var(--ink-muted)]">
-          +{cities.length - 6} more cities in dataset
-        </p>
-      )}
+      </div>
+
+      <p className="mt-3 text-xs leading-relaxed text-[var(--ink-muted)]">
+        Marker size reflects exposure severity. Data represents city-centroid model estimates from
+        Copernicus CAMS — not individual monitoring stations.
+      </p>
     </Panel>
   );
 }

@@ -25,14 +25,14 @@ export function SiteHeader() {
       <div className="border-t border-[var(--line)] bg-slate-50/80">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--accent-light)]">
-            Prototype shell · data contract v1
+            Global city cohort · 24 markets
           </p>
           <h1 className="mt-2 max-w-3xl text-2xl font-semibold tracking-tight text-[var(--ink)] sm:text-3xl">
             Livability scores tell one story. Air quality tells another.
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
-            UrbanPulse overlays public PM2.5 exposure on baseline city rankings. This shell validates
-            the data contract before feature wiring.
+            UrbanPulse overlays public PM2.5 exposure on baseline city rankings so planners,
+            policymakers, and residents see where environmental risk changes the picture.
           </p>
         </div>
       </div>

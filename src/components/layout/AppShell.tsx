@@ -1,12 +1,12 @@
 import type { CitiesDataset } from "@/lib/schema";
-import { WHO_BAND_META } from "@/lib/constants";
-import { cohortPm25Mean, formatPm25 } from "@/lib/format";
+import { cohortPm25Mean, formatPm25, trendDirection } from "@/lib/format";
+import { generateInsights } from "@/lib/insights";
 import { MetricCard } from "@/components/cards/MetricCard";
 import { InsightCard } from "@/components/cards/InsightCard";
-import { TrendPanel } from "@/components/trends/TrendPanel";
+import { CitySummaryCard } from "@/components/cards/CitySummaryCard";
+import { ComparePanel } from "@/components/compare/ComparePanel";
+import { TrendChart } from "@/components/trends/TrendChart";
 import { MapPanel } from "@/components/map/MapPanel";
-import { Panel } from "@/components/ui/Panel";
-import { StatePlaceholder } from "@/components/ui/StatePlaceholder";
 
 interface AppShellProps {
   data: CitiesDataset;
@@ -20,12 +20,21 @@ export function AppShell({ data }: AppShellProps) {
   const highExposure = cities.filter(
     (c) => c.airQuality.whoBand === "elevated" || c.airQuality.whoBand === "high"
   ).length;
-  const defaultTrendIds = cities.slice(0, 3).map((c) => c.id);
+  const improving = cities.filter(
+    (c) => trendDirection(c.airQuality.trendPercent3Mo) === "improving"
+  ).length;
+  const defaultTrendIds = ["stockholm", "tokyo", "delhi"].filter((id) =>
+    cities.some((c) => c.id === id)
+  );
+  const insights = generateInsights(cities);
+  const sortedByEffective = [...cities].sort(
+    (a, b) => a.airQuality.effectiveRank - b.airQuality.effectiveRank
+  );
 
   return (
-    <div className="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl space-y-10 px-4 py-8 sm:px-6 lg:px-8">
       {/* Overview */}
-      <section id="overview" className="space-y-6">
+      <section id="overview" className="space-y-8">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
             label="Cohort PM2.5 mean"
@@ -43,88 +52,68 @@ export function AppShell({ data }: AppShellProps) {
             detail="Markets flagged by WHO band"
           />
           <MetricCard
-            label="Dataset"
-            value={`${cities.length} cities`}
-            detail={`Generated ${generatedAt}`}
+            label="Improving trends"
+            value={String(improving)}
+            detail={`Of ${cities.length} cities · data through ${generatedAt}`}
           />
         </div>
 
         <div>
-          <h2 className="mb-4 text-sm font-semibold tracking-tight">Intelligence brief</h2>
+          <div className="mb-4 flex items-baseline justify-between gap-4">
+            <div>
+              <h2 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+                Intelligence brief
+              </h2>
+              <p className="mt-0.5 text-xs text-[var(--ink-muted)]">
+                What matters for citizens and municipal decision-makers
+              </p>
+            </div>
+          </div>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            <InsightCard tag="Shell" title="Insight engine not wired" />
-            <InsightCard tag="Shell" title="Regional benchmarks pending" />
-            <InsightCard tag="Shell" title="Exposure leaders pending" />
-            <InsightCard tag="Shell" title="Trend alerts pending" />
+            {insights.map((insight) => (
+              <InsightCard
+                key={insight.title}
+                tag={insight.tag}
+                title={insight.title}
+                body={insight.body}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="mb-4">
+            <h2 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+              City overview
+            </h2>
+            <p className="mt-0.5 text-xs text-[var(--ink-muted)]">
+              How is each city doing — exposure, trend, and rank impact
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {sortedByEffective.map((city) => (
+              <CitySummaryCard key={city.id} city={city} />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Compare */}
-      <Panel
-        id="compare"
-        title="City comparison"
-        description="Baseline livability rank vs environment-adjusted effective rank — table pending"
-      >
-        <StatePlaceholder
-          variant="loading"
-          title="Compare table shell"
-          message="Will consume livabilityRank, effectiveRank, rankDelta, and whoBand from CityRecord."
-        />
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[640px] text-left text-xs">
-            <thead>
-              <tr className="border-b border-[var(--line)] text-[var(--ink-muted)]">
-                <th className="px-3 py-2 font-medium">City</th>
-                <th className="px-3 py-2 font-medium">Baseline rank</th>
-                <th className="px-3 py-2 font-medium">PM2.5</th>
-                <th className="px-3 py-2 font-medium">WHO band</th>
-                <th className="px-3 py-2 font-medium">Effective rank</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cities.slice(0, 8).map((city) => {
-                const band = WHO_BAND_META[city.airQuality.whoBand];
-                return (
-                  <tr key={city.id} className="border-b border-[var(--line)] last:border-0">
-                    <td className="px-3 py-2 font-medium">{city.name}</td>
-                    <td className="px-3 py-2 font-mono">#{city.livabilityRank}</td>
-                    <td className="px-3 py-2 font-mono">
-                      {formatPm25(city.airQuality.pm25AnnualMean)}
-                    </td>
-                    <td className="px-3 py-2">
-                      <span
-                        className={`rounded-full border px-2 py-0.5 ${band.bg} ${band.border} ${band.color}`}
-                      >
-                        {band.label}
-                      </span>
-                    </td>
-                    <td className="px-3 py-2 font-mono">#{city.airQuality.effectiveRank}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {cities.length > 8 && (
-            <p className="mt-2 text-xs text-[var(--ink-muted)]">
-              Preview shows 8 of {cities.length} cities
-            </p>
-          )}
-        </div>
-      </Panel>
+      <ComparePanel cities={cities} />
 
+      {/* Trends + Map */}
       <div className="grid gap-6 lg:grid-cols-2">
-        <TrendPanel cities={cities} selectedCityIds={defaultTrendIds} />
+        <TrendChart cities={cities} defaultSelectedIds={defaultTrendIds} />
         <MapPanel cities={cities} />
       </div>
 
       <footer className="border-t border-[var(--line)] pt-6 text-xs leading-relaxed text-[var(--ink-muted)]">
         <p>
-          <strong className="text-[var(--ink)]">Data contract.</strong> {methodology.airQuality}.{" "}
+          <strong className="text-[var(--ink)]">Methodology.</strong> {methodology.airQuality}.{" "}
           {methodology.whoThresholds}. {methodology.livabilityBaseline}.
         </p>
         <p className="mt-2">
-          Regenerate:{" "}
+          Refresh data:{" "}
           <code className="rounded bg-slate-100 px-1 py-0.5 font-mono text-[11px]">
             npm run data:fetch
           </code>
