@@ -9,12 +9,16 @@ export default function HomePage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         {result.ok ? (
           <AppShell data={result.data} />
         ) : (
           <div className="mx-auto max-w-lg px-4 py-16">
-            <StatePlaceholder variant="error" title="Failed to load city data" message={result.error} />
+            <StatePlaceholder
+              variant="error"
+              title="City data failed validation"
+              message={`${result.error} Regenerate the dataset with npm run data:fetch, then reload this page.`}
+            />
           </div>
         )}
       </main>

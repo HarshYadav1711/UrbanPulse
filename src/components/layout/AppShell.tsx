@@ -1,12 +1,14 @@
 import type { CitiesDataset } from "@/lib/schema";
-import { cohortPm25Mean, formatPm25, trendDirection } from "@/lib/format";
+import { cohortPm25Mean, formatPm25 } from "@/lib/format";
 import { generateInsights } from "@/lib/insights";
+import { countByTrend, trendRuleText } from "@/lib/status";
 import { MetricCard } from "@/components/cards/MetricCard";
 import { InsightCard } from "@/components/cards/InsightCard";
 import { CitySummaryCard } from "@/components/cards/CitySummaryCard";
 import { ComparePanel } from "@/components/compare/ComparePanel";
 import { TrendChart } from "@/components/trends/TrendChart";
 import { MapPanel } from "@/components/map/MapPanel";
+import { StatePlaceholder } from "@/components/ui/StatePlaceholder";
 
 interface AppShellProps {
   data: CitiesDataset;
@@ -20,9 +22,7 @@ export function AppShell({ data }: AppShellProps) {
   const highExposure = cities.filter(
     (c) => c.airQuality.whoBand === "elevated" || c.airQuality.whoBand === "high"
   ).length;
-  const improving = cities.filter(
-    (c) => trendDirection(c.airQuality.trendPercent3Mo) === "improving"
-  ).length;
+  const trendCounts = countByTrend(cities);
   const defaultTrendIds = ["stockholm", "tokyo", "delhi"].filter((id) =>
     cities.some((c) => c.id === id)
   );
@@ -33,7 +33,6 @@ export function AppShell({ data }: AppShellProps) {
 
   return (
     <div className="mx-auto max-w-7xl space-y-10 px-4 py-8 sm:px-6 lg:px-8">
-      {/* Overview */}
       <section id="overview" className="space-y-8">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <MetricCard
@@ -42,43 +41,56 @@ export function AppShell({ data }: AppShellProps) {
             detail={`${aboveWho} of ${cities.length} above WHO 5 µg/m³ target`}
           />
           <MetricCard
+            label="Trend split"
+            value={`${trendCounts.improving} / ${trendCounts.stable} / ${trendCounts.worsening}`}
+            detail="Improving · stable · worsening (3-mo rule)"
+          />
+          <MetricCard
             label="Rank adjustments"
             value={String(rankShifts)}
-            detail="Cities whose effective rank differs from baseline"
+            detail="Cities where exposure changes effective rank"
           />
           <MetricCard
-            label="Elevated / high exposure"
+            label="Elevated exposure"
             value={String(highExposure)}
-            detail="Markets flagged by WHO band"
-          />
-          <MetricCard
-            label="Improving trends"
-            value={String(improving)}
-            detail={`Of ${cities.length} cities · data through ${generatedAt}`}
+            detail={`Data through ${generatedAt}`}
           />
         </div>
 
         <div>
-          <div className="mb-4 flex items-baseline justify-between gap-4">
-            <div>
-              <h2 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
-                Intelligence brief
-              </h2>
-              <p className="mt-0.5 text-xs text-[var(--ink-muted)]">
-                What matters for citizens and municipal decision-makers
-              </p>
+          <div className="mb-4">
+            <h2 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
+              Insights
+            </h2>
+            <p className="mt-0.5 text-xs text-[var(--ink-secondary)]">
+              Rule-based signals from PM2.5 trends, exposure bands, and rank adjustments
+            </p>
+          </div>
+
+          {insights.length === 0 ? (
+            <StatePlaceholder
+              variant="empty"
+              title="No insights generated"
+              message="Insights require at least one city with valid air quality and trend fields."
+            />
+          ) : (
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {insights.map((insight) => (
+                <InsightCard
+                  key={insight.id}
+                  tag={insight.tag}
+                  title={insight.title}
+                  body={insight.body}
+                  rule={insight.rule}
+                  trendStatus={insight.trendStatus}
+                />
+              ))}
             </div>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {insights.map((insight) => (
-              <InsightCard
-                key={insight.title}
-                tag={insight.tag}
-                title={insight.title}
-                body={insight.body}
-              />
-            ))}
-          </div>
+          )}
+
+          <p className="mt-3 text-[10px] leading-relaxed text-[var(--ink-muted)]">
+            {trendRuleText()} Each card states the rule that selected it.
+          </p>
         </div>
 
         <div>
@@ -86,8 +98,8 @@ export function AppShell({ data }: AppShellProps) {
             <h2 className="text-sm font-semibold tracking-tight text-[var(--ink)]">
               City overview
             </h2>
-            <p className="mt-0.5 text-xs text-[var(--ink-muted)]">
-              How is each city doing — exposure, trend, and rank impact
+            <p className="mt-0.5 text-xs text-[var(--ink-secondary)]">
+              Status, exposure, and quarter trend for each market — expand “Why this status” for the underlying rules
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -98,10 +110,8 @@ export function AppShell({ data }: AppShellProps) {
         </div>
       </section>
 
-      {/* Compare */}
       <ComparePanel cities={cities} />
 
-      {/* Trends + Map */}
       <div className="grid gap-6 lg:grid-cols-2">
         <TrendChart cities={cities} defaultSelectedIds={defaultTrendIds} />
         <MapPanel cities={cities} />

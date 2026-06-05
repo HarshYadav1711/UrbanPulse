@@ -14,7 +14,7 @@ export function RankDelta({ delta, baselineRank, effectiveRank }: RankDeltaProps
   }
 
   const isPenalty = delta > 0;
-  const color = isPenalty ? "text-rose-700" : "text-emerald-700";
+  const color = isPenalty ? "text-rose-800" : "text-emerald-800";
   const arrow = isPenalty ? "↓" : "↑";
 
   return (
@@ -22,7 +22,9 @@ export function RankDelta({ delta, baselineRank, effectiveRank }: RankDeltaProps
       <span>
         #{baselineRank} → #{effectiveRank}
       </span>
-      <span className="rounded bg-current/10 px-1.5 py-0.5 font-sans font-medium">
+      <span
+        className={`rounded px-1.5 py-0.5 font-sans font-medium ${isPenalty ? "bg-rose-100" : "bg-emerald-100"}`}
+      >
         {arrow} {Math.abs(delta)}
       </span>
     </span>
