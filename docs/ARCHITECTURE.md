@@ -116,7 +116,10 @@ No auth, no backend, no LLM. One page (`/`) with anchored sections.
 ```
 UrbanPulse/
 ├── docs/
-│   └── ARCHITECTURE.md          ← this file
+│   ├── ARCHITECTURE.md          ← this file
+│   ├── DATA_SOURCE.md
+│   ├── DATA_QUALITY.md          ← auto-generated
+│   └── METHODOLOGY.md           ← cleaning pipeline notes
 ├── public/
 │   └── data/
 │       └── cities.json          ← validated app data (SSOT on disk)
