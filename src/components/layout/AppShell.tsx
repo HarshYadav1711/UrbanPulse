@@ -9,6 +9,7 @@ import { ComparePanel } from "@/components/compare/ComparePanel";
 import { TrendChart } from "@/components/trends/TrendChart";
 import { MapPanel } from "@/components/map/MapPanel";
 import { StatePlaceholder } from "@/components/ui/StatePlaceholder";
+import { DatasetExport } from "@/components/ui/DatasetExport";
 
 interface AppShellProps {
   data: CitiesDataset;
@@ -117,12 +118,13 @@ export function AppShell({ data }: AppShellProps) {
         <MapPanel cities={cities} />
       </div>
 
-      <footer className="border-t border-[var(--line)] pt-6 text-xs leading-relaxed text-[var(--ink-muted)]">
+      <footer className="space-y-5 border-t border-[var(--line)] pt-6 text-xs leading-relaxed text-[var(--ink-muted)]">
+        <DatasetExport generatedAt={generatedAt} />
         <p>
           <strong className="text-[var(--ink)]">Methodology.</strong> {methodology.airQuality}.{" "}
           {methodology.whoThresholds}. {methodology.livabilityBaseline}.
         </p>
-        <p className="mt-2">
+        <p>
           Refresh data:{" "}
           <code className="rounded bg-slate-100 px-1 py-0.5 font-mono text-[11px]">
             npm run data:fetch
