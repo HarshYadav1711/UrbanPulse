@@ -29,6 +29,12 @@ Four views on a single page—no login, no backend, no black-box commentary. Eac
 
 Rule-based insight cards explain *why* a city appears in a given state—trend thresholds, WHO bands, rank penalties—with the logic shown in plain text.
 
+### Effective Rank (exploratory metric)
+
+**Effective Rank** is an exploratory comparison metric—not an official ranking. It exists solely to visualize how environmental exposure might shift a city's position relative to its baseline livability rank. Penalties are intentionally simple and deterministic; the full logic is transparent and reproducible in [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
+
+> Users should treat Effective Rank as a screening tool rather than a formal city ranking methodology.
+
 ---
 
 ## Why this dataset

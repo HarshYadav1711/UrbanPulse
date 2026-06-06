@@ -74,6 +74,10 @@ From cleaned hourly values:
 
 `rankDelta = effectiveRank − livabilityRank`. A positive delta means environmental exposure pushes the city down relative to its headline ranking.
 
+**Effective Rank is an exploratory comparison metric—not an official ranking.** It exists solely to visualize environmental exposure impact on baseline livability position. Penalties are intentionally simple and deterministic so the adjustment is easy to audit: each WHO band maps to a fixed offset, applied uniformly across the cohort. The logic is transparent and reproducible from the table above and the build scripts in `scripts/ingest/`.
+
+> Users should treat Effective Rank as a screening tool rather than a formal city ranking methodology.
+
 **Trend status** (UI layer, `src/lib/status.ts`):
 
 - Improving: 3-month trend ≤ −5%
