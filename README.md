@@ -1,24 +1,24 @@
 # UrbanPulse
 
-Environmental intelligence for city comparison.
+**A public-data enhancement layer for city dashboards.**
 
-Livability rankings tell you which metros score well on infrastructure, safety, and services. They rarely tell you whether the air meets health guidelines—or whether conditions are getting worse. UrbanPulse adds that missing layer: public PM2.5 exposure, trend direction, and rank adjustments on top of a baseline city ranking.
+UrbanPulse extends existing city intelligence dashboards with environmental visibility—surfacing PM2.5 exposure, trend direction, and rank adjustments that augment baseline livability rankings. It sits alongside the dashboards and rankings you already use, helping decision makers spot where headline scores and hidden environmental risk diverge.
 
-Built for citizens comparing relocation options and municipal staff screening where headline scores and environmental risk diverge.
+Built for citizens comparing relocation options and municipal staff screening cities where livability rankings omit air-quality context.
 
 ---
 
 ## The problem
 
-A city ranked #8 and one ranked #12 can look interchangeable on a livability dashboard. One may sit above the WHO PM2.5 target year-round; the other may be posting a worsening quarterly trend. Without exposure data, that gap stays invisible.
+City dashboards and livability rankings help compare metros on infrastructure, safety, and services. They rarely surface whether the air meets health guidelines—or whether conditions are getting worse. A city ranked #8 and one ranked #12 can look interchangeable on a dashboard; one may sit above the WHO PM2.5 target year-round while the other posts a worsening quarterly trend. Without exposure data, that gap stays invisible.
 
-UrbanPulse makes the gap visible. It does not replace official monitoring or regulatory reporting. It gives a consistent, reproducible view across 24 global cities so you can ask better questions before diving into local sources.
+UrbanPulse adds an environmental visibility layer on top of those existing rankings. It does not replace official monitoring, regulatory reporting, or the dashboards you already rely on. It gives a consistent, reproducible view across 24 global cities so you can ask better questions before diving into local sources.
 
 ---
 
 ## What the prototype does
 
-Four views on a single page—no login, no backend, no black-box commentary.
+Four views on a single page—no login, no backend, no black-box commentary. Each view augments standard city-dashboard comparisons with environmental context.
 
 | View | What it answers |
 |------|-----------------|
@@ -125,9 +125,9 @@ UrbanPulse/
 
 ## Who this is for
 
-**Citizens** comparing cities get exposure bands, recent trend direction, and rank shifts that livability scores alone do not surface.
+**Citizens** comparing cities get an enhancement layer on top of livability dashboards—exposure bands, recent trend direction, and rank shifts that baseline scores alone do not surface.
 
-**Municipal staff** get a screening layer: which high-ranked cities carry elevated PM2.5, which regions run above cohort average, where quarterly trends need attention. The insight rules are transparent—useful for briefing, not a substitute for local monitor networks.
+**Municipal staff and decision makers** get a screening layer alongside existing city intelligence: which high-ranked cities carry elevated PM2.5, which regions run above cohort average, where quarterly trends need attention. The insight rules are transparent—useful for briefing, not a substitute for local monitor networks.
 
 ---
 
@@ -137,7 +137,7 @@ UrbanPulse/
 |-------|--------|
 | **Prototype link** | [http://localhost:3000](http://localhost:3000) after `npm install && npm run dev` · Source: [github.com/HarshYadav1711/UrbanPulse](https://github.com/HarshYadav1711/UrbanPulse) |
 | **Public dataset** | [Copernicus CAMS PM2.5](https://atmosphere.copernicus.eu/) via [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) (`pm2_5`, hourly, city centroid coordinates) |
-| **Rationale (50 words)** | City livability rankings rarely include air quality exposure. We selected Copernicus CAMS PM2.5 via Open-Meteo because it is free, globally consistent, institutionally maintained, and tied to WHO thresholds—giving citizens and municipal planners a reproducible environmental signal for cross-city comparison without paid APIs, credentials, or vendor lock-in. |
+| **Rationale (50 words)** | City livability dashboards rarely include air quality exposure. UrbanPulse is a public-data enhancement layer: Copernicus CAMS PM2.5 via Open-Meteo augments existing rankings with environmental visibility—free, globally consistent, institutionally maintained, tied to WHO thresholds—helping citizens and planners spot hidden environmental risk without replacing local dashboards or paid APIs. |
 | **Cleaning / transformation** | Hourly PM2.5 fetched per city centroid (365-day window, UTC). Duplicates averaged; values above 500 µg/m³ discarded; cities under 50% coverage excluded; missing hours not imputed. Aggregated to daily and monthly means, 90-day rolling average, window mean, WHO 2021 bands, 3-month trend %, and effective livability rank adjustment. Exported to JSON/CSV with machine-readable quality report. |
 
 ---
