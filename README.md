@@ -175,17 +175,6 @@ UrbanPulse meets the assessment criteria for public, reproducible data use:
 
 ---
 
-## Submission
-
-| Field | Value |
-|-------|--------|
-| **Prototype link** | [http://localhost:3000](http://localhost:3000) after `npm install && npm run dev` · Source: [github.com/HarshYadav1711/UrbanPulse](https://github.com/HarshYadav1711/UrbanPulse) |
-| **Public dataset** | [Copernicus CAMS PM2.5](https://atmosphere.copernicus.eu/) via [Open-Meteo Air Quality API](https://open-meteo.com/en/docs/air-quality-api) (`pm2_5`, hourly, city centroid coordinates) |
-| **Rationale (50 words)** | City livability dashboards rarely include air quality exposure. UrbanPulse is a public-data enhancement layer: Copernicus CAMS PM2.5 via Open-Meteo augments existing rankings with environmental visibility—free, globally consistent, institutionally maintained, tied to WHO thresholds—helping citizens and planners spot hidden environmental risk without replacing local dashboards or paid APIs. |
-| **Cleaning / transformation** | Hourly PM2.5 fetched per city centroid (365-day window, UTC). Duplicates averaged; values above 500 µg/m³ discarded; cities under 50% coverage excluded; missing hours not imputed. Aggregated to daily and monthly means, 90-day rolling average, window mean, WHO 2021 bands, 3-month trend %, and effective livability rank adjustment. Exported to JSON/CSV with machine-readable quality report. |
-
----
-
 ## Future Work
 
 Potential extensions beyond the current prototype:
