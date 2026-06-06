@@ -64,6 +64,18 @@ Every city record in the app passes through the same path:
 CAMS (via Open-Meteo) → acquire → clean → aggregate → validate → render
 ```
 
+```mermaid
+flowchart TD
+    CAMS[CAMS] --> OpenMeteo[Open-Meteo]
+    OpenMeteo --> Acquire[Acquire]
+    Acquire --> Transform[Transform]
+    Transform --> Validate["Validate (Zod)"]
+    Validate --> CitiesJson[cities.json]
+    CitiesJson --> UI[Next.js UI]
+```
+
+Institutional PM2.5 data flows from CAMS through ingestion, schema validation, and static export before the Next.js app renders it.
+
 - **Acquire:** Hourly `pm2_5` per city centroid from `scripts/config/cities_registry.json`
 - **Clean:** UTC timestamps, duplicate hours averaged, sanity ceiling at 500 µg/m³, no imputation
 - **Gate:** Cities below 50% observation coverage are excluded entirely
