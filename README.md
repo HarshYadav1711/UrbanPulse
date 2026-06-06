@@ -137,6 +137,15 @@ UrbanPulse/
 
 ---
 
+## Why this matters
+
+- **Hidden risk detection.** Surfaces high-ranked cities with elevated PM2.5—places where headline livability scores and environmental exposure diverge.
+- **Trend awareness.** Flags worsening PM2.5 trajectories even when baseline rankings remain strong.
+- **Transparency.** Rule-based insight cards with explicit thresholds—no black-box scoring or opaque composite indices.
+- **Reproducibility.** One public institutional source (Copernicus CAMS via Open-Meteo) and fully documented transformations from acquisition through validation.
+
+---
+
 ## Submission
 
 | Field | Value |
