@@ -186,6 +186,19 @@ UrbanPulse meets the assessment criteria for public, reproducible data use:
 
 ---
 
+## Future Work
+
+Potential extensions beyond the current prototype:
+
+- Additional environmental indicators
+- More cities
+- Historical benchmarking
+- Municipal monitoring overlays
+
+These items are intentionally excluded from the prototype to keep scope focused on a single public dataset.
+
+---
+
 ## Licence and attribution
 
 Air quality data: Copernicus CAMS via Open-Meteo (free non-commercial use; see [Open-Meteo terms](https://open-meteo.com/en/terms)).
