@@ -2,7 +2,7 @@
 
 **A public-data enhancement layer for city dashboards.**
 
-UrbanPulse extends existing city intelligence dashboards with environmental visibility—surfacing PM2.5 exposure, trend direction, and rank adjustments that augment baseline livability rankings. It sits alongside the dashboards and rankings you already use, helping decision makers spot where headline scores and hidden environmental risk diverge.
+City rankings often miss environmental exposure. UrbanPulse surfaces that missing signal, integrating PM2.5 exposure and trends into city comparison workflows. Every step uses public data, documented transformations, and transparent rule-based logic—reproducible from source to screen.
 
 Built for citizens comparing relocation options and municipal staff screening cities where livability rankings omit air-quality context.
 
